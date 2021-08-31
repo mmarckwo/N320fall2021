@@ -15,7 +15,7 @@ const WaterAttributes = {
 function setup() {
     createCanvas(450, 550);
 
-    WaterAttributes.water = new Water(0, 550, WaterAttributes.waterLevel);
+    WaterAttributes.water = new Water(-10, 550, WaterAttributes.waterLevel);
 
     for (let i = 0; i < 15; i++) {
         Raindrops.raindrops[i] = new Raindrop(10);
