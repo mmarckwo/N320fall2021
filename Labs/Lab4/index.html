@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .h1Wrap {
+            position: relative;
+            overflow: hidden;
+            max-width: fit-content;
+            /*border: 1px solid black;*/
+        }
+
+        h1 {
+            position: absolute;
+            color: darkblue;
+        }
+
+        
+        .bar {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(0, 0, 150);
+        }
+        /*
+        .fadeIn {
+            animation-name: fadeAnimation;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeAnimation {
+            from { opacity: 0%; }
+            to { opacity: 100%; }
+            
+        }
+        */
+        /*
+        .type {
+            animation: typeAnimation 7s forwards;
+        }
+        
+        @keyframes typeAnimation {
+            from { width: 0%; opacity: 75%; }
+            to { width: 100%; opacity: 100%; }
+            
+        }
+        */
+
+        .box-row {
+            display: flex;
+            gap: 2em;
+            max-width: fit-content;
+            margin-top: 35px;
+            margin-left: 35px;
+        }
+
+        .box {
+            background-color: blueviolet;
+            width: 250px;
+            height: 150px;
+        }
+
+        .popIn {
+            transform: scale(0);
+        }
+
+        p {
+            color: rgb(225, 225, 225);
+            font-size: large;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="h1Wrap type" style="width: 0px; opacity: 75%;">Animations</h1>
+    <div class="bar fadeIn" style="opacity: 0%;"><p>Hover over/off and click on the boxes below.</p></div>
+    <div class="box-row">
+        <div class="box popIn"></div>
+        <div class="box popIn"></div>
+        <div class="box popIn"></div>
+    </div>
+    <div class="box-row">
+        <div class="box popIn"></div>
+        <div class="box popIn"></div>
+        <div class="box popIn"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="js/animator.js"></script>
+
+</body>
+</html>
